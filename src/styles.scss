@@ -1,0 +1,118 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$angular-basics-primary: mat-palette($mat-indigo);
+$angular-basics-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$angular-basics-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$angular-basics-theme: mat-light-theme($angular-basics-primary, $angular-basics-accent, $angular-basics-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($angular-basics-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/material-design-iconic-font.css';
+@font-face {
+    font-family: 'notoSansRegular';
+    src: url(/assets/fonts/notoSans/notosans-regular-webfont.ttf);
+    src: url(/assets/fonts/notoSans/notosans-regular-webfont.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'notoSansBold';
+    src: url(/assets/fonts/notoSans/notosans-bold-webfont.ttf);
+    src: url(/assets/fonts/notoSans/notosans-bold-webfont.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'eyInterstateRegular';
+    src: url(/assets/fonts/eyInterstate/EYInterstate-Regular.ttf);
+    src: url(/assets/fonts/eyInterstate/EYINTERSTATE-REGULAR.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'eyInterstateBold';
+    src: url(/assets/fonts/eyInterstate/EYInterstate-Bold.ttf);
+    src: url(/assets/fonts/eyInterstate/EYInterstate-Bold.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.delPopupOverlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    z-index: 1;
+    left: 0px;
+}
+.popupHeader {
+    background-color: #2E2E38;
+    color: #fff;
+    padding: 0px 15px;
+    font-size: 16px;
+    height: 50px;
+    font-family: 'notoSansBold';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span.closePopup {
+    font-size: 21px;
+    padding: 0 7px;
+    cursor: pointer;
+}
+.popupBtnArea {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 18px 0px;
+    margin-top: 19px;
+    border-top: 1px solid #cdcdc4;
+}
+.popupContentArea {
+    padding: 20px !important;
+}
+.modalBox {
+    display:flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+.modalPopup {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+.custom-dialog-container .mat-dialog-container {
+    padding: 0px;
+}
+.custom-dialog-container .mat-dialog-content {
+    margin: 0;
+    padding: 0;
+}

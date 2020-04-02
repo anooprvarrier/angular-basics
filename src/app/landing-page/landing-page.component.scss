@@ -1,0 +1,71 @@
+.back_Btn {
+    font-weight: 400;
+    font-style: normal;
+    color: #369;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 13px;
+    font-family: notoSansRegular;
+}
+.pageMainHead{
+    font-size: 24px;
+    font-family: notoSansBold;
+    color: #333;
+    max-width: 100%;
+    margin: 20px auto 0;
+}
+.analysis-wrapper{
+    padding: 20px;
+}
+.analysis-wrapper .pageMainHead{
+    padding: 0 !important;
+}
+.analysis-wrapper .sectionHeader{
+    font-size: 14px;
+    color: #747480;
+    font-family: notoSansRegular;
+}
+.analysis-wrapper hr{
+    border-top: 2px solid #000;
+    
+}
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+.settingsBtn{
+	display: flex;
+    justify-content: flex-start;
+    width: 350px;
+}
+.canclBtn{
+    margin-right: 5px !important;
+}
+.zmdi-alert-circle{
+    color: red !important;
+}
+.canclBtn {
+    font-size: 14px;
+    border: 1px solid #2e2e38;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #2e2e38;
+    font-family: 'eyInterstateBold';
+    max-width: 140px;
+    min-width: 140px;
+    min-width: 140px;
+    background-color: #ffffff;
+}
+
+.canclBtn.disable {
+    color: #999;
+    border: 1px solid #eaeaea;
+    cursor: not-allowed;
+    background-color: #eaeaea;
+}
